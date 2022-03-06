@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css//style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+
+<body class="h-screen w-screen">
+    <div id="main" class="h-full w-full flex">
+        <nav
+            class="w-full h-14 fixed top-0 px-2 text-gray-400 border-b-2 border-black-200 shadow-lg flex flex-row items-center flex-nowrap align-baseline justify-start">
+            <a href="/" class=" rounded-full p-0">
+                <img src="/public/images/facebook-icon.png" class="h-14 w-14 object-fill">
+            </a>
+            <div class="w-64 h-9 bg-slate-100 rounded-full flex basis-auto items-center pl-3 gap-1">
+                <i class='flex-none bx bx-search-alt-2'></i>
+                <div class="flex-1 h-full pr-2">
+                    <form action="/search" class="pd-0 h-full flex items-center mb-0 bg-transparent">
+                        <input placeholder="Search" type="search"
+                            class="w-full align-text-bottom text-sm font-medium bg-transparent focus:outline-none">
+                    </form>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-row-reverse text-gray-600 text-lg relative">
+                <button role="toggle" class="bg-gray-100 rounded-full m-1 p-3 focus:bg-blue-100 focus:text-blue-500 visited:block target:.dropdown "
+                        data-toggle="settings"
+                >
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <button role="toggle"  class="bg-gray-100 rounded-full m-1 p-3 focus:bg-blue-100 focus:text-blue-500"
+                        data-toggle="notifications"
+                >
+                    <i class='bx bxs-bell'></i>
+                </button>
+                <button role="toggle"  class="bg-gray-100 rounded-full m-1 p-3 focus:bg-blue-100 focus:text-blue-500">
+                    <i class='bx bx-conversation '></i>
+                </button>
+                <button class="bg-gray-100 rounded-full m-1 p-3 focus:bg-blue-100 focus:text-blue-500">
+                    <i class='bx bxs-edit' ></i>
+                </button>
+                <div class="flex flex-row justify-evenly items-center align-middle">
+                    <img src=""/>
+                    <span></span>
+                </div>
+                <div toggle="settings" class="dropdown hidden absolute top-12 right-3 overflow-visible w-72 h-96 border-2 border-gray-200 bg-white rounded-lg shadow-lg">
+                    settings
+                </div>
+                <div toggle="notifications" class="dropdown hidden absolute top-12 right-3 overflow-visible w-72 h-96 border-2 border-gray-200 bg-white rounded-lg shadow-lg">
+                    notifications
+                </div>
+                <div class="dropdown hidden absolute top-12 right-3 overflow-visible w-72 h-96 border-2 border-gray-200 bg-white rounded-lg shadow-lg">
+                    messages
+                </div>
+            </div>
+        </nav>
+        <div class="w-full mt-14 bg-slate-100">
+        </div>
+    </div>
+</body>
+<script src="/public/scripts/script.js"></script>
+
+</html>
