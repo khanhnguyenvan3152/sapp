@@ -4,15 +4,13 @@ module.exports = {
   content: [
     "./public/css/*.css",
     "./public/scripts/*.js",
-    "./*.html",
+    "./public/*.html",
   ],
   theme: {
     extend: {},
   },
   color:{
-    bglight: "#fff",
-    bggray: "#F0F2F5",
-    bgheavy: "#C4C4C4"
+
   },
   
   plugins: [],

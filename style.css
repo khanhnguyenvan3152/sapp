@@ -41,6 +41,11 @@
         @apply
         transition-opacity
     }
+    .dropdown-top h3{
+        @apply
+        font-semibold
+    }
+
 }
 @layer base{
     ::-webkit-search-cancel-button{
@@ -48,6 +53,36 @@
         height: 12px;
         width: 12px;
         background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>")
+    }
+    emoji-picker{
+        --num-columns: 5;
+        --emoji-size: 1rem;
+        border-radius: 15px;
+    }
+    [placeholder]:empty::before {
+        content: attr(placeholder);
+        color: #555; 
+    }
+    
+    [placeholder]:empty:focus::before {
+        content: "";
+    }
+    #newPostContent::-webkit-scrollbar{
+        width: 10px;
+        background-color: #eee;
+    }
+    #newPostContent::-webkit-scrollbar:hover{
+        cursor:pointer;
+    }
+    #newPostContent::-webkit-scrollbar-track{
+    }
+    #newPostContent::-webkit-scrollbar-thumb{
+        background: #ccc;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    #newPostContent::-webkit-scrollbar-thumb:hover{
+        cursor: pointer;
     }
     .dropdown{
         animation: showUp 0.3s ;
@@ -60,4 +95,13 @@
             opacity: 1;
         }
     }
+    @media screen and (max-width: 1000px) {
+        .body{
+            @apply
+            block
+        }
+    }
+
+    
 }
+
